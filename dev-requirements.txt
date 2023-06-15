@@ -1,0 +1,17 @@
+dagshub
+hydra-core
+hyperopt
+joblib
+mlflow
+numpy
+pandas
+pandera
+patsy
+pytest-steps
+scikit_learn
+streamlit
+xgboost
+dvc
+pydantic
+pytest
+bentoml

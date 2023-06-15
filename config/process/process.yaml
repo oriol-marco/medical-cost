@@ -1,0 +1,20 @@
+target:
+  - charges
+
+features:
+  - age
+  - sex
+  - bmi
+  - children
+  - smoker
+  - region
+
+cat_features:
+  - region
+  - sex
+  - smoker
+
+num_features:
+  - age
+  - bmi
+  - children
