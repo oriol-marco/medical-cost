@@ -31,7 +31,6 @@ model:
   name: xgboost
   path: ${model.dir}/${model.name}
 
-mlflow_tracking_ui:
-  file:\Mi unidad\01_Oriol\00_Proyectos\202306_mlops_medical_cost\mlruns\
-mlflow_USERNAME: omarcosan
-mlflow_PASSWORD: 1234
+mlflow_tracking_ui: https://dagshub.com/oriol-marco/medical_cost.mlflow
+mlflow_USERNAME: oriol-marco
+mlflow_PASSWORD: ec6621290f0dcd042ce0eaae8da0c0f936115515

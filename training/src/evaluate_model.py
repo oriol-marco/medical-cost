@@ -2,6 +2,7 @@ import warnings
 
 warnings.filterwarnings(action="ignore")
 
+import os
 import hydra
 import joblib
 import mlflow
@@ -47,11 +48,11 @@ def log_metrics(**metrics: dict):
 def evaluate(config: DictConfig):
     # Local enviorment
     mlflow.set_tracking_uri(config.mlflow_tracking_ui)
-    mlflow.set_experiment("medical-costs-prediction")
+    #mlflow.set_experiment("medical-costs-prediction")
 
     # Remote enviorment
-    #os.environ['MLFLOW_TRACKING_USERNAME'] = config.mlflow_USERNAME
-    #os.environ['MLFLOW_TRACKING_PASSWORD'] = config.mlflow_PASSWORD
+    os.environ['MLFLOW_TRACKING_USERNAME'] = config.mlflow_USERNAME
+    os.environ['MLFLOW_TRACKING_PASSWORD'] = config.mlflow_PASSWORD
     
     with mlflow.start_run():
         
@@ -71,8 +72,8 @@ def evaluate(config: DictConfig):
         log_params(model, config.process.features)
         log_metrics(rmse=rmse)
         
-        mlflow.sklearn.log_model(model, "model")
-        mlflow.log_metric("rmse", rmse)
+        #mlflow.sklearn.log_model(model, "model")
+        #mlflow.log_metric("rmse", rmse)
         
         # Remote enviroment Dagshub
         #mloflow.sklearn.log_model(model, "model")

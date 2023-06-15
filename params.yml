@@ -9,7 +9,7 @@ enable_categorical: false
 eval_metric: null
 feature_types: null
 features: '[''age'', ''sex'', ''bmi'', ''children'', ''smoker'', ''region'']'
-gamma: 3.828700144119227
+gamma: 7.084629741012868
 gpu_id: null
 grow_policy: null
 importance_type: null
@@ -31,7 +31,7 @@ num_parallel_tree: null
 objective: reg:squarederror
 predictor: null
 random_state: null
-reg_alpha: 100
+reg_alpha: 76
 reg_lambda: null
 sampling_method: null
 scale_pos_weight: null
